@@ -5,12 +5,20 @@ header {
     padding: 20px;
 }
 
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0d4c6a; /* Metallic blue color */
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
 nav ul {
-    position: absolue;
-    left: 50%
     list-style-type: none;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
@@ -30,7 +38,7 @@ nav ul li a {
 
 /* Styles for footer */
 footer {
-    background-color: #333;
+    background-color: #0d4c6a; /* Metallic blue color */
     color: #fff;
     padding: 10px;
     text-align: center;
