@@ -92,3 +92,16 @@ const hashedPassword = hashPassword(plaintextPassword);
 console.log('Hashed password:', hashedPassword);
 
 
+
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('/user-profile.php')
+  .then(response => response.json())
+  .then(data => {
+      document.getElementById('username').innerText = 'Username: ' + data.username;
+      document.getElementById('email').innerText = 'Email: ' + data.email;
+      document.getElementById('age').innerText = 'Age: ' + data.age;
+  })
+  .catch(error => console.error('Error fetching user profile:', error));
+});
+

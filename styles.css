@@ -96,7 +96,7 @@ background-repeat: no-repeat;
 footer {
     position: relative; /* Set the position to relative */
 
-    top: 1431px; /* Align footer to the bottom of its container */
+    top: 1111px; /* Align footer to the bottom of its container */
     background-color: #00796B; /* Green electric emerald color */
     color: #000000;
     padding: 10px;
@@ -127,3 +127,55 @@ footer {
 
 
 
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+
+
+
+ /* Carousel container */
+ .carousel-container {
+    position: relative;
+    top: 71px;
+    left: 14%;
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Snap to each item */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+    margin-bottom: 20px;
+}
+
+/* Individual carousel items */
+.carousel-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start; /* Snap to start of each item */
+    width: 200px;
+    margin-right: 10px;
+    border: 1px solid #dddddd00;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+.carousel-item:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Icons */
+.icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
