@@ -1,8 +1,8 @@
 #loginBtn {
     width: auto;
-    position:fixed;
-    top: 315px;
-    right: 1%;
+    position:relative;
+    top: 35px;
+    left: 82%;
     background-color: #316879; /* Green electric emerald color */
     font-size: 3.8em;
     color: #000000;
@@ -57,7 +57,7 @@
  /* Styles for login popup */
  .popup {
     width: 25%;
-    height: 70%;
+    height: 60%;
      display: none;
      position: fixed;
      top: 60%;
