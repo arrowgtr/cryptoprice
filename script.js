@@ -90,3 +90,5 @@ function hashPassword(password) {
 const plaintextPassword = 'password123';
 const hashedPassword = hashPassword(plaintextPassword);
 console.log('Hashed password:', hashedPassword);
+
+

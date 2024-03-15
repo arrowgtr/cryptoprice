@@ -1,0 +1,68 @@
+ 
+  /* Style for register form heading */
+  #registerPopup h2 { 
+    position: relative;
+    left: 5%;
+    top: 22px;
+    font-size: 74px; /* Adjust the font size as needed */
+    color: #000000; /* Text color */
+    margin-top: 10px; /* Top margin */
+    margin-bottom: 40px; /* Bottom margin */
+  }
+
+  /* Style for register form container */
+#registerPopup {
+    display: none; /* Hide the registration form by default */
+  }
+  
+  /* Style for register form content */
+  #registerPopup .popup-content {
+    text-align: center;
+  }
+  
+  /* Style for register form inputs */
+  #registerPopup input[type="text"],
+  #registerPopup input[type="password"]
+    {
+       
+        width: 70%;
+        margin-top: 25px;
+        font-size: 1.5em;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+      #registerPopup button[type="submit"] {
+        width: 60%;
+        font-size: 1.5em;
+    background-color: #316879;
+        border: 1px solid #cccccc00;
+        border-radius: 5px;
+      margin-top: 24px;
+        box-sizing: border-box;
+        cursor: pointer;
+
+    }
+  /* Style for register form links */
+  #registerPopup p a {
+    background-color: #316879;
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+    padding: 5px 10px;
+    
+  }
+  
+
+ a#LoginLink
+ {
+
+    position: relative;
+    bottom: -12px;
+    left: -152px;
+    font-size: 1.4em;
+     color: #ffffff;
+     float: right;
+     font-weight: bold;
+ }
+ 

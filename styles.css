@@ -1,9 +1,11 @@
 
-body {
+html {
     background: linear-gradient(to bottom, hsl(173, 100%, 24%), #001f3f); /* Gradient from dark electric blue to black */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-size:auto;
+background-repeat: no-repeat;
+  width: auto;
+  height: 2200px;
+  overflow-y: scroll;
     margin: 0; /* Remove default body margin */
     padding: 0; /* Remove default body padding */
     font-family: Arial, sans-serif; /* Optional: Set a default font family */
@@ -18,7 +20,6 @@ body {
     padding: 50px; /* Adjust padding as needed */
     text-align: center;
 }
- 
 .header-nav {
     position: relative; 
     left: 50%;
@@ -33,13 +34,12 @@ body {
     font-size: 35px;
 }
 
+
 .header-nav ul {
     list-style-type: none;
-
     padding: 0;
     text-align: center;
 }
-
 
 .header-nav ul li {
     display: inline;
@@ -51,278 +51,74 @@ body {
 }
 
 .header-nav ul li a {
+    position: relative;
+    left: 10px%;
     font-style: bold;
     color: #ffffff;
+    font-size: 2em;
     text-decoration: none;
-}
-
- 
- /* Styles for login button */
- #loginBtn {
-    width: auto;
-    position: absolute;
-    top: 192px;
-    right: 1%;
-    background-color: #316879; /* Green electric emerald color */
-    font-size: 3.8em;
-    color: #000000;
-    padding: 25px 85px 25px 62px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    position: relative; /* Add position relative for parent */
     transition: background-color 0.3s ease;
     overflow: hidden; /* Hide the overflow for pseudo-element */
     z-index: 1; /* Ensure button is above pseudo-element */
 }
 
-#loginBtn:hover {
-    background-color: #00796B; /* Darker blue metallic color on hover */
-}
-
-#loginBtn::after {
+.header-nav ul li a::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -15px; /* Adjust the position of the line */
     left: 0;
     width: 100%;
-    height: 15px;
+    height: 15px; /* Height of the line */
     background: linear-gradient(to bottom, hsl(173, 100%, 24%), #001f3f); /* Gradient from dark electric blue to black */
-    transition: transform 0.3s ease;
-    transform: scaleX(0); /* Initially hide the bar */
+    transition: transform 0.3s ease; /* Transition for smooth effect */
+    transform: scaleX(0); /* Initially hide the line */
 }
 
-#loginBtn:hover::after {
-    transform: scaleX(1); /* Show the bar on hover */
-}
-
-.key-icon {
-    position: absolute;
-    top: 29%;
-    right: 257px;
-    width: 55px;
-    height: 55px;
-    background-image: url('key.png'); /* URL of the key icon image */
-    background-size: cover;
-    transition: transform 2.4s ease;
-    transform: translateX(0);
-    opacity: 1;
-}
-
-#loginBtn:hover .key-icon {
-    transform: translateX(244px);
-    opacity: 1;
-}
-
-
- /* Styles for login popup */
- .popup {
-    width: 25%;
-    height: 50%;
-     display: none;
-     position: fixed;
-     top: 60%;
-     left: 50%;
-     transform: translate(-50%, -60%);
-     background-color: #00796B; /* Green electric emerald color */
-     padding: 20px;
-     border: 1px solid #cccccc00;
-     border-radius: 5px;
-     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-     z-index: 999;
- }
- 
-
-
-  
-  
-
-  
- .popup-content {
-    font-size: 2.3em;
-     text-align: center;
- }
- 
-/* Style for login form container */
-#loginPopup {
-    display: none; /* Hide the login form by default */
-  }
-  
-  /* Style for login form content */
-  #loginPopup .popup-content {
-    text-align: center;
-    max-height: 450px; 
-  }
-  
-  /* Style for login form inputs */
-  #loginPopup input[type="text"],
-  #loginPopup input[type="password"]
-  {
-    margin-top: 10px;
-   
-    width: 70%;
-    font-size: 1.5em;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-  #loginPopup button[type="submit"]
-  {
-    width: 50%;
-    font-size: 1.7em;
-background-color: #316879;
-    border: 1px solid #cccccc00;
-    border-radius: 5px;
-  margin-top: 24px;
-    box-sizing: border-box;
-    cursor: pointer;
-}
-
- /* Style for login form heading */
-#loginPopup h2 {
-    font-size: 64px; /* Adjust the font size as needed */
-    color: #000000; /* Text color */
-    margin-top: 10px; /* Top margin */
-    margin-bottom: 40px; /* Bottom margin */
-  }
-
-    /* Style for loginform links */
-    #loginPopup p a {
-        position: relative;
-      top: 20px;
-        background-color: #316879;
-        text-decoration: none;
-        color: #000000;
-        cursor: pointer;
-     margin-top: 30px;
-     font-size: 155%;
-      }
-
-  
-
-  
-  /* Style for register form heading */
-  #registerPopup h2 { 
-    position: relative;
-    left: 5%;
-    top: 22px;
-    font-size: 74px; /* Adjust the font size as needed */
-    color: #000000; /* Text color */
-    margin-top: 10px; /* Top margin */
-    margin-bottom: 40px; /* Bottom margin */
-  }
-
-  /* Style for register form container */
-#registerPopup {
-    display: none; /* Hide the registration form by default */
-  }
-  
-  /* Style for register form content */
-  #registerPopup .popup-content {
-    text-align: center;
-  }
-  
-  /* Style for register form inputs */
-  #registerPopup input[type="text"],
-  #registerPopup input[type="password"]
-    {
-       
-        width: 70%;
-        margin-top: 25px;
-        font-size: 1.5em;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-    }
-
-      #registerPopup button[type="submit"] {
-        width: 60%;
-        font-size: 1.5em;
-    background-color: #316879;
-        border: 1px solid #cccccc00;
-        border-radius: 5px;
-      margin-top: 24px;
-        box-sizing: border-box;
-        cursor: pointer;
-
-    }
-  /* Style for register form links */
-  #registerPopup p a {
-    background-color: #316879;
-    text-decoration: none;
+.header-nav ul li a:hover {
     color: #000000;
-    cursor: pointer;
-    padding: 5px 10px;
-    
-  }
-  
-
- a#LoginLink
- {
-
-    position: relative;
-    bottom: -12px;
-    left: -152px;
-    font-size: 1.4em;
-     color: #ffffff;
-     float: right;
-     font-weight: bold;
- }
- 
- 
-
- .close {
-
-    position: relative;
-    bottom: 45px;
-    font-size: 2.5em;
-     color: #ffffff;
-     float: right;
-     font-weight: bold;
- }
- 
- .close:hover {
- color: #000000da;
- float: right;
- font-weight: bold;
+    padding: 10px 15px;
+    background-color: #00796B; /* Darker blue metallic color on hover */
+}
+.header-nav ul li a:hover::after {
+    transform: scaleX(1); /* Show the line on hover */
 }
 
- .close:focus {
-     color: black;
-     text-decoration: none;
-     cursor: pointer;
- }
+
+
+
+
+
  
  /* Styles for footer */
- footer {
-     position: fixed;
-     bottom: 0;
-     left: 0;
-     width: 100%;
-     background-color: #00796B; /* Green electric emerald color */
-     color: #000000;
-     padding: 10px;
-     text-align: center;
-     font-size: 2rem;
- }
- 
- .footer-nav {
-     width: 100%;
-     display: inline-block;
- }
- 
- .footer-nav ul {
-     width: 100%;
-     list-style-type: none;
-     padding: 0;
- }
- 
- .footer-nav ul li {
-     width: 100%;
-     display: inline;
- }
- 
- .footer-nav ul li a {
-     width: 100%;
-     color: #fff;
-     text-decoration: none;
- }
- 
+footer {
+    position: relative; /* Set the position to relative */
+
+    top: 1611px; /* Align footer to the bottom of its container */
+    background-color: #00796B; /* Green electric emerald color */
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 20px; /* Add margin-top to create space between footer and content */
+}
+
+.footer-nav {
+    width: 100%;
+    display: inline-block;
+}
+
+.footer-nav ul {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-nav ul li {
+    display: inline;
+}
+
+.footer-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
