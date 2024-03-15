@@ -1,97 +1,290 @@
+
+body {
+    background: linear-gradient(to bottom, hsl(173, 100%, 24%), #001f3f); /* Gradient from dark electric blue to black */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    font-family: Arial, sans-serif; /* Optional: Set a default font family */
+}
+
 /* Styles for header and navigation */
-header {
+.header {
+    background-image: url('header.png'); /* URL of your header image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px; /* Adjust padding as needed */
     text-align: center;
-    background-color: #00796B; /* Green electric emerald color */
- }
+}
  
- nav {
-     position: relative;
-     left: 50%;
-     transform: translateX(-50%);
-     background-color: #316879; /* Blue metallic color */
-     padding: 10px 20px;
-     border-radius: 10px;
-     text-align: center;
-     font-size: large;
- }
- 
- nav ul {
-     list-style-type: none;
-     margin: 0;
-     padding: 0;
-     text-align: center;
- }
- 
- nav ul li {
-     display: inline;
-     margin-right: 20px;
- }
- 
- nav ul li a {
-     color: #fff;
-     text-decoration: none;
- }
+.header-nav {
+    position: relative; 
+    left: 50%;
+    bottom: -140px;
+    width: 101%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    background-color: #316879; /* Blue metallic color */
+    padding: 5px 40px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.header-nav ul {
+    list-style-type: none;
+
+    padding: 0;
+    text-align: center;
+}
+
+
+.header-nav ul li {
+    display: inline;
+    margin-right: 80px; /* Adjust the margin-right for spacing */
+}
+
+.header-nav ul li:last-child {
+    margin-right: 0; /* Remove margin-right for the last list item */
+}
+
+.header-nav ul li a {
+    font-style: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
  
  /* Styles for login button */
  #loginBtn {
-     position: absolute;
-     right: 0%;
-     background-color: #00796B; /* Green electric emerald color */
-     font-size: 2em;
-     color: #000000;
-     padding: 5px 45px 5px 2px;
-     border: none;
-     border-radius: 5px;
-     cursor: pointer;
-     transition: background-color 0.3s ease;
- }
- 
- #loginBtn:hover {
-     background-color: #316879; /* Darker blue metallic color on hover */
- }
- 
- .key-icon {
-     position: absolute;
-     top: 15%;
-     right: 5px;
-     width: 35px;
-     height: 35px;
-     transition: transform 0.3s ease;
-     transform: translateX(0);
-     opacity: 0;
- }
- 
- #loginBtn:hover .key-icon {
-     transform: translateX(0px);
-     opacity: 1;
- }
- 
+    width: auto;
+    position: absolute;
+    top: 192px;
+    right: 1%;
+    background-color: #316879; /* Green electric emerald color */
+    font-size: 3.8em;
+    color: #000000;
+    padding: 25px 85px 25px 62px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    overflow: hidden; /* Hide the overflow for pseudo-element */
+    z-index: 1; /* Ensure button is above pseudo-element */
+}
+
+#loginBtn:hover {
+    background-color: #00796B; /* Darker blue metallic color on hover */
+}
+
+#loginBtn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(to bottom, hsl(173, 100%, 24%), #001f3f); /* Gradient from dark electric blue to black */
+    transition: transform 0.3s ease;
+    transform: scaleX(0); /* Initially hide the bar */
+}
+
+#loginBtn:hover::after {
+    transform: scaleX(1); /* Show the bar on hover */
+}
+
+.key-icon {
+    position: absolute;
+    top: 29%;
+    right: 257px;
+    width: 55px;
+    height: 55px;
+    background-image: url('key.png'); /* URL of the key icon image */
+    background-size: cover;
+    transition: transform 2.4s ease;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#loginBtn:hover .key-icon {
+    transform: translateX(244px);
+    opacity: 1;
+}
+
+
  /* Styles for login popup */
  .popup {
+    width: 25%;
+    height: 50%;
      display: none;
      position: fixed;
-     top: 50%;
+     top: 60%;
      left: 50%;
-     transform: translate(-50%, -50%);
+     transform: translate(-50%, -60%);
      background-color: #00796B; /* Green electric emerald color */
      padding: 20px;
-     border: 1px solid #ccc;
+     border: 1px solid #cccccc00;
+     border-radius: 5px;
      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
      z-index: 999;
  }
  
+
+
+  
+  
+
+  
  .popup-content {
+    font-size: 2.3em;
      text-align: center;
  }
  
- .close {
+/* Style for login form container */
+#loginPopup {
+    display: none; /* Hide the login form by default */
+  }
+  
+  /* Style for login form content */
+  #loginPopup .popup-content {
+    text-align: center;
+    max-height: 450px; 
+  }
+  
+  /* Style for login form inputs */
+  #loginPopup input[type="text"],
+  #loginPopup input[type="password"]
+  {
+    margin-top: 10px;
+   
+    width: 70%;
+    font-size: 1.5em;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  #loginPopup button[type="submit"]
+  {
+    width: 50%;
+    font-size: 1.7em;
+background-color: #316879;
+    border: 1px solid #cccccc00;
+    border-radius: 5px;
+  margin-top: 24px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+ /* Style for login form heading */
+#loginPopup h2 {
+    font-size: 64px; /* Adjust the font size as needed */
+    color: #000000; /* Text color */
+    margin-top: 10px; /* Top margin */
+    margin-bottom: 40px; /* Bottom margin */
+  }
+
+    /* Style for loginform links */
+    #loginPopup p a {
+        position: relative;
+      top: 20px;
+        background-color: #316879;
+        text-decoration: none;
+        color: #000000;
+        cursor: pointer;
+     margin-top: 30px;
+     font-size: 155%;
+      }
+
+  
+
+  
+  /* Style for register form heading */
+  #registerPopup h2 { 
+    position: relative;
+    left: 5%;
+    top: 22px;
+    font-size: 74px; /* Adjust the font size as needed */
+    color: #000000; /* Text color */
+    margin-top: 10px; /* Top margin */
+    margin-bottom: 40px; /* Bottom margin */
+  }
+
+  /* Style for register form container */
+#registerPopup {
+    display: none; /* Hide the registration form by default */
+  }
+  
+  /* Style for register form content */
+  #registerPopup .popup-content {
+    text-align: center;
+  }
+  
+  /* Style for register form inputs */
+  #registerPopup input[type="text"],
+  #registerPopup input[type="password"]
+    {
+       
+        width: 70%;
+        margin-top: 25px;
+        font-size: 1.5em;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+      #registerPopup button[type="submit"] {
+        width: 60%;
+        font-size: 1.5em;
+    background-color: #316879;
+        border: 1px solid #cccccc00;
+        border-radius: 5px;
+      margin-top: 24px;
+        box-sizing: border-box;
+        cursor: pointer;
+
+    }
+  /* Style for register form links */
+  #registerPopup p a {
+    background-color: #316879;
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+    padding: 5px 10px;
+    
+  }
+  
+
+ a#LoginLink
+ {
+
+    position: relative;
+    bottom: -12px;
+    left: -152px;
+    font-size: 1.4em;
      color: #ffffff;
      float: right;
-     font-size: 28px;
      font-weight: bold;
  }
  
- .close:hover,
+ 
+
+ .close {
+
+    position: relative;
+    bottom: 45px;
+    font-size: 2.5em;
+     color: #ffffff;
+     float: right;
+     font-weight: bold;
+ }
+ 
+ .close:hover {
+ color: #000000da;
+ float: right;
+ font-weight: bold;
+}
+
  .close:focus {
      color: black;
      text-decoration: none;
@@ -106,29 +299,28 @@ header {
      width: 100%;
      background-color: #00796B; /* Green electric emerald color */
      color: #000000;
-     padding: 20px;
+     padding: 10px;
      text-align: center;
      font-size: 2rem;
  }
  
- footer nav {
+ .footer-nav {
      width: 100%;
      display: inline-block;
  }
  
- footer ul {
+ .footer-nav ul {
      width: 100%;
      list-style-type: none;
      padding: 0;
  }
  
- footer ul li {
+ .footer-nav ul li {
      width: 100%;
      display: inline;
-     margin-right: 20px;
  }
  
- footer ul li a {
+ .footer-nav ul li a {
      width: 100%;
      color: #fff;
      text-decoration: none;

@@ -7,9 +7,8 @@
         <link rel="stylesheet" href="styles.css">
     </head>
 <body>
-    <header>
-        <h1>Crypto Hub</h1>
-        <nav>
+    <header class="header">
+        <nav class="header-nav">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">News</a></li>
@@ -24,32 +23,39 @@
         <img src="key.png" alt="Key Icon" class="key-icon">
       </button>
       
-    <div id="loginPopup" class="popup">
-      <div class="popup-content">
-        <span class="close">&times;</span>
-        <h2>Login</h2>
-        <form>
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username">
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password">
-          <button type="submit">Login</button>
-        </form>
-        <p>Don't have an account? <a href="#" id="registerLink">Register</a></p>
+      <div id="loginPopup" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <h2>Login</h2>
+          <form>
+           
+            <input type="text" id="username" name="username" placeholder="Username">
+            <br>
+    
+            <input type="password" id="password" name="password" placeholder="Password">
+            <br>
+            <button type="submit">Login</button>
+          </form>
+          <p>Don't have an account? <a href="#" id="registerLink">Register</a></p>
+        </div>
       </div>
-    </div>
+      <div id="successMessage" style="display: none;">Login successful!</div>
+
     
     <div id="registerPopup" class="popup">
       <div class="popup-content">
         <span class="close">&times;</span>
         <h2>Register</h2>
         <form>
-          <label for="newUsername">Username:</label>
-          <input type="text" id="newUsername" name="newUsername">
-          <label for="newPassword">Password:</label>
-          <input type="password" id="newPassword" name="newPassword">
+           <input type="text" id="username" name="username" placeholder="Username">
+          <br>
+          <input type="password" id="password" name="password" placeholder="Password">
+          <br>
           <button type="submit">Register</button>
         </form>
+          <p>Already have an account? <a href="#" id="LoginLink">Log In</a></p>
+       
+       
       </div>
     </div>
 
@@ -65,13 +71,13 @@
   
 
     <footer>
-        <nav>
-        <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Guides</a></li>
-            <li><a href="#">Forum</a></li>
-    </ul>
-</nav>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Guides</a></li>
+                <li><a href="#">Forum</a></li>
+            </ul>
+        </nav>
         <p>&copy; 2024 Crypto Hub. All rights reserved.</p>
     </footer>
     <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>   </script>
