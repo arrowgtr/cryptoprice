@@ -4,7 +4,8 @@ html {
     background-size:auto;
 background-repeat: no-repeat;
   width: auto;
-  height: 2200px;
+  height: 2800px;
+  max-height: max-content;
   overflow-y: scroll;
     margin: 0; /* Remove default body margin */
     padding: 0; /* Remove default body padding */
@@ -143,39 +144,81 @@ h1 {
 
 
 
- /* Carousel container */
- .carousel-container {
+.frame table td {
+    font-size: 45px; /* Adjust the font size as needed */
+}
+
+.frame table th:nth-child(1) {
     position: relative;
-    top: 71px;
-    left: 14%;
-    display: flex;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    scroll-snap-type: x mandatory; /* Snap to each item */
-    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
-    margin-bottom: 20px;
-}
-
-/* Individual carousel items */
-.carousel-item {
-    flex: 0 0 auto;
-    scroll-snap-align: start; /* Snap to start of each item */
-    width: 200px;
-    margin-right: 10px;
-    border: 1px solid #dddddd00;
-    border-radius: 5px;
-    padding: 10px;
+    right:  71px; 
+    /* Styles for the first column header */
+    font-size: 38px;
+    font-weight: bold;
     text-align: center;
-    transition: transform 0.5s ease; /* Smooth transition */
+    padding: 10px;
+    border-bottom: 2px solid #cccccc00;
 }
 
-/* Hover effect */
-.carousel-item:hover {
-    transform: scale(1.1); /* Scale up on hover */
+.frame table th:nth-child(2) {
+    /* Styles for the second column header */
+    font-size: 28px;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
 }
 
-/* Icons */
-.icon {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 10px;
+.frame table th:nth-child(3) {
+    /* Styles for the third column header */
+    font-size: 28px;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
 }
+
+.frame table th:nth-child(4) {
+    /* Styles for the fourth column header */
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+}
+
+
+.frame {
+ 
+position: relative;
+top : 40px;
+right: 490px;
+    border: 1px solid #cccccc00;
+    border-radius: 10prgba(204, 204, 204, 0)
+    background-color: #f9f9f900;
+    padding: 20px;
+    margin-top: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+table {
+    width: 200%;
+    border-collapse: collapse;
+}
+
+th, td {
+font-size: 1.7em;
+    border: 1px solid #dddddd00;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    
+    background-color: #33333300;
+    color: #fff;
+}
+
+.crypto-icon {
+    width: 38px; /* Set width to 1em for all icons */
+    height: 38px; /* Set height to 1em for all icons */
+}
+

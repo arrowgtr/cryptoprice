@@ -65,35 +65,51 @@
       </div>
     </div>
 
-
-    <div class="carousel-container">
-      <div class="carousel-item">
-          <img src="icons/btc.png" alt="Bitcoin Icon" class="icon">
-          <h2>Bitcoin</h2>
-          <p id="btc-price">$0.00</p>
-      </div>
-      <div class="carousel-item">
-          <img src="https://github.com/arrowgtr/cryptoprice/blob/main/.github/workflows/btc.png" alt="Ethereum Icon" class="icon">
-          <h2>Ethereum</h2>
-          <p id="eth-price">$0.00</p>
-      </div>
-      <div class="carousel-item">
-          <img src="icons/sol.png" alt="Solana Icon" class="icon">
-          <h2>solana</h2>
-          <p id="sol-price">$0.00</p>
-      </div>
-      <div class="carousel-item">
-        <img src="icons/kas.png" alt="Kaspa Icon" class="icon">
-        <h2>Kaspa</h2>
-        <p id="kas-price">$0.00</p>
+    <main>
+      <div id="crypto-prices">
+        <!-- Cryptocurrency prices will be displayed here -->
     </div>
-    <div class="carousel-item">
-      <img src="icons/bnb.png" alt="Bnb Icon" class="icon">
-      <h2>Kaspa</h2>
-      <p id="bnb">$0.00</p>
-  </div>
-  </div>
+
+      <div class="frame">
+     
+          <table>
+              <tr>
+                  <th>Coin</th>
+                  <th>Price (USD)</th>
+                  <th>Market Cap</th>
+                  <th>Exchanger</th>
+              </tr>
+              <tr>
+                  <td><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/icons/btc.png" alt="Bitcoin Icon" class="crypto-icon"> BTC</td>
+                  <td id="btc-price">$0.00</td>
+                  <td id="btc-market-cap">$0.00</td>
+                  <td id="btc-exchanger">Mexc</td>
+              </tr>
+              <tr>
+                  <td><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/icons/eth.png" alt="Ethereum Icon" class="crypto-icon"> ETH</td>
+                  <td id="eth-price">$0.00</td>
+                  <td id="eth-market-cap">$0.00</td>
+                  <td id="eth-exchanger">Mexc</td>
+              </tr>
+              <tr>
+                  <td><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/icons/sol.png" alt="Solana Icon" class="crypto-icon"> SOL</td>
+                  <td id="sol-price">$0.00</td>
+                  <td id="sol-market-cap">$0.00</td>
+                  <td id="sol-exchanger">Mexc</td>
+              </tr>
+              <tr>
+                  <td><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/icons/bnb.png" alt="Binance Coin Icon" class="crypto-icon"> BNB</td>
+                  <td id="bnb-price">$0.00</td>
+                  <td id="bnb-market-cap">$0.00</td>
+                  <td id="bnb-exchanger">Mexc</td>
+              </tr>
+          </table>
+      </div>
+     
+  </main>
   
+  
+
 
 
   
@@ -101,6 +117,7 @@
     <div class="cryptohopper-web-widget" data-id="2" data-coins="bitcoin , 
     eth,bnb,solana,kaspa" data-numcoins="10" data-theme="midnight" data-realtime="on" data-ticker_position="header" data-ticker_speed="10" data-ticker_design="2"></div>
     <footer>
+
         <nav class="footer-nav">
             <ul>
                 <li><a href="#">About</a></li>
@@ -110,64 +127,9 @@
         </nav>
         <p>&copy; 2024 Crypto Hub. All rights reserved.</p>
     </footer>
-   
-    <script>
-      async function fetchCryptoData() {
-          try {
-              const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,binancecoin,kaspa&vs_currencies=usd');
-              const data = await response.json();
-              return data;
-          } catch (error) {
-              console.error('Error fetching cryptocurrency data:', error);
-              return null;
-          }
-      }
-  
-      async function updatePrices() {
-          const cryptoData = await fetchCryptoData();
-          if (cryptoData) {
-              const btcPrice = cryptoData.bitcoin.usd;
-              const ethPrice = cryptoData.ethereum.usd;
-              const solPrice = cryptoData.solana.usd;
-              const bnbPrice = cryptoData.binancecoin.usd; // Update identifier for Binance Coin
-              const kasPrice = cryptoData.kaspa.usd; // Update identifier for Kaspa
-  
-              updatePriceWithArrow('btc-price', btcPrice);
-              updatePriceWithArrow('eth-price', ethPrice);
-              updatePriceWithArrow('sol-price', solPrice);
-              updatePriceWithArrow('bnb-price', bnbPrice);
-              updatePriceWithArrow('kas-price', kasPrice);
-          }
-      }
-  
-      function updatePriceWithArrow(elementId, currentPrice) {
-          const priceElement = document.getElementById(elementId);
-          const prevPrice = parseFloat(priceElement.dataset.prevPrice || currentPrice);
-          const arrowElement = document.createElement('i');
-          arrowElement.classList.add('arrow');
-  
-          if (currentPrice > prevPrice) {
-              arrowElement.classList.add('green');
-              arrowElement.classList.remove('red');
-          } else if (currentPrice < prevPrice) {
-              arrowElement.classList.add('red');
-              arrowElement.classList.remove('green');
-          } else {
-              // No change, remove arrow
-              arrowElement.style.display = 'none';
-          }
-  
-          priceElement.textContent = `$${currentPrice}`;
-          priceElement.appendChild(arrowElement);
-          priceElement.dataset.prevPrice = currentPrice;
-      }
-  
-      updatePrices();
-      setInterval(updatePrices, 600000); // Update every 10 minutes
-  </script>
-  
-  
-     
+
+    <script src="cmcapi.js" defer></script>
+    <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script> <div class="livecoinwatch-widget-3" lcw-base="USD" lcw-d-head="true" lcw-d-name="true" lcw-d-code="true" lcw-d-icon="true" lcw-color-tx="#ffffff" lcw-color-bg="#1f2434" lcw-border-w="1" ></div>
      <script src="script.js"></script>
      <script src="https://www.cryptohopper.com/widgets/js/script"></script>
     
