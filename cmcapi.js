@@ -48,4 +48,7 @@ async function updatePrices() {
 updatePrices();
 
 // Set interval to update prices periodically (e.g., every 10 minutes)
-setInterval(updatePrices, 600000); // Update every 10 minutes
+setInterval(updatePrices, 1000); // Update every 1 minutes
+
+
+
