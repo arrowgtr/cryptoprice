@@ -160,7 +160,7 @@
       <div id="container" style="position: absolute; bottom: 210px; left: 285px;   ">
      
         <div id="container" style="position: relative; width: 1000px; height: 100px; overflow: hidden;">
-          <iframe id="audioFrame" src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&enablejsapi=1&controls=0" width="100%" height="130%" frameborder="0"></iframe>
+          <iframe src="https://sp3.streams.ovh/cp/widgets/player/single/?p=8034" width="100%" height="130%" frameborder="0"></iframe>
       </div>
       
       
@@ -178,34 +178,7 @@
         <p>&copy; 2024 Crypto Hub. All rights reserved.</p>
     </footer>
 
-    <script>
-     // This function loads the YouTube iframe API script asynchronously
-     function loadYouTubeIframeAPI() {
-            var tag = document.createElement('script');
-            tag.src = 'https://www.youtube.com/iframe_api';
-            var firstScriptTag = document.getElementsByTagName('script')[0];
-            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-        }
-
-        // This function initializes the YouTube player
-        var player;
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('audioFrame', {
-                events: {
-                    'onReady': onPlayerReady
-                }
-            });
-        }
-
-        // This function sets the volume to 20% and starts playback when the player is ready
-        function onPlayerReady(event) {
-            event.target.setVolume(20); // Set volume to 20%
-            event.target.playVideo();   // Start playback
-        }
-
-        // Load the YouTube iframe API script
-        loadYouTubeIframeAPI();
-  </script>
+    
 
     <script src="radio.css"></script>
     <script src="cmcapi.js" defer></script>

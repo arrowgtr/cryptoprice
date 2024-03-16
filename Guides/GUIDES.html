@@ -74,6 +74,35 @@
     </nav>
     <p>&copy; 2024 Crypto Hub. All rights reserved.</p>
 </footer>
+
+<script>
+    // This function loads the YouTube iframe API script asynchronously
+    function loadYouTubeIframeAPI() {
+           var tag = document.createElement('script');
+           tag.src = 'https://www.youtube.com/iframe_api';
+           var firstScriptTag = document.getElementsByTagName('script')[0];
+           firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+       }
+
+       // This function initializes the YouTube player
+       var player;
+       function onYouTubeIframeAPIReady() {
+           player = new YT.Player('audioFrame', {
+               events: {
+                   'onReady': onPlayerReady
+               }
+           });
+       }
+
+       // This function sets the volume to 20% and starts playback when the player is ready
+       function onPlayerReady(event) {
+           event.target.setVolume(20); // Set volume to 20%
+           event.target.playVideo();   // Start playback
+       }
+
+       // Load the YouTube iframe API script
+       loadYouTubeIframeAPI();
+ </script>
 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async></script>
 <script src="script.js"></script>
 
