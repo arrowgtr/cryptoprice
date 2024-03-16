@@ -4,7 +4,7 @@ html{
     background-size:auto;
 background-repeat: no-repeat;
 overflow-x: none;
- max-width:  100%;;
+ max-width:  1440px;
   height: 2800px;
     margin: 0; /* Remove default body margin */
     padding: 0; /* Remove default body padding */
@@ -236,7 +236,7 @@ td#bnb-price
  /* CSS styles for the frame */
  .frame {
     position: absolute;
-    bottom: 172px;
+    bottom: 132px;
     width: 250px; /* Adjust the width as needed */
     height: 300px; /* Adjust the height as needed */
     border: 2px solid #00000000; /* Black border */
