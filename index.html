@@ -2,11 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>cryptoprice</title>
         <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <link rel="stylesheet" href="https://arrowgtr.github.io/cryptoprice/css/styles.css">
-          <link rel="stylesheet" href="https://arrowgtr.github.io/cryptoprice/css/loginform.css">
+        <link rel="stylesheet" href="styles.css">
+          <link rel="stylesheet" href="loginform.css">
         <link rel="stylesheet" href="https://arrowgtr.github.io/cryptoprice/css/signupform.css">
         <link rel="stylesheet" href="https://arrowgtr.github.io/cryptoprice/css/popup.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CSS -->
@@ -122,15 +122,9 @@
             
           </table>
   
+      
         
 
-       <!-- Widget container for the CoinGecko Coin Heatmap Widget -->
-    <div class="coin-heatmap-widget-container">
-      <!-- Include the script to load the widget library -->
-      <script src="https://widgets.coingecko.com/coingecko-coin-heatmap-widget.js"></script>
-      <!-- Add the widget element with height, locale, width, and top attributes -->
-      <coingecko-coin-heatmap-widget height="400" locale="en" width="290" top="20"></coingecko-coin-heatmap-widget>
-  </div>
 
 
 <div class="frame">
@@ -154,12 +148,22 @@
     </label>
   </div>
 </div>
-    <div id="widgetContainer" class="cryptohopper-web-widget" data-id="2" data-chart_color="#316879" data-coins="bitcoin,ethereum,bnb,solana,xrp,avalanche-2,chainlink,near-protocol,uniswap,render-token,ordinals" data-theme="midnight" data-realtime="on" data-ticker_design="2"></div>
+    <div id="widgetContainer" class="cryptohopper-web-widget" data-id="2" data-chart_color="#316879" data-coins="bitcoin,ethereum,bnb,solana,arbitrum" data-theme="midnight" data-realtime="on" data-ticker_design="2"></div>
+         <!-- Widget container for the CoinGecko Coin Heatmap Widget -->
+         <div class="coin-heatmap-widget-container">
+          <!-- Include the script to load the widget library -->
+          <script src="https://widgets.coingecko.com/coingecko-coin-heatmap-widget.js"></script>
+          <!-- Add the widget element with height, locale, width, and top attributes -->
+          <coingecko-coin-heatmap-widget height="300" locale="en" width="310" top="20"></coingecko-coin-heatmap-widget>
+      </div>
   
-  
-
-<footer>
-
+      <div id="container" style="position: absolute; bottom: 210px; left: 285px;   ">
+     
+        <div id="container" style="position: relative; width: 1000px; height: 100px; overflow: hidden;">
+          <iframe src="https://sp3.streams.ovh/cp/widgets/player/single/?p=8034" width="100%" height="130%" frameborder="0"></iframe>
+      </div>
+      
+     <footer>
       
         <nav class="footer-nav">
             <ul>
@@ -171,6 +175,7 @@
        
         <p>&copy; 2024 Crypto Hub. All rights reserved.</p>
     </footer>
+    <script src="radio.css"></script>
     <script src="cmcapi.js" defer></script>
      <script src="script.js"></script>
      <script src="https://www.cryptohopper.com/widgets/js/script"></script>

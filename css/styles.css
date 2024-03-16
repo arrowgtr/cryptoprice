@@ -131,10 +131,10 @@ table {
     
     position: relative;
     background-color: #333333;
-    padding: 21px 0px 40px 20px;
+    padding: 21px 0px 0px 0px;
     top: 49px;
     left: 253px;
-    width:65%;
+    width:72%;
     font-style: bold ;
     
 }
@@ -163,8 +163,8 @@ th {
 
 
 .crypto-icon {
-   margin-right: 15px; /* Adjust the spacing between icon and text as needed */
-   margin-block: 10px;
+   margin-right: 5px; /* Adjust the spacing between icon and text as needed */
+   margin-block: 5px;
     position: relative;
     top: 1px;
     left: 2px;
@@ -211,11 +211,11 @@ td#bnb-price
         }
         
 
-.cryptohopper-web-widget{
-            position: relative;
-            top: 109px;
-    height: 155px; /* Adjust the height as needed */
-    margin-right: 15px;
+        .cryptohopper-web-widget{
+            position: absolute;
+            bottom: 44px;
+            left: 22px;
+            width: 97%;
 }
 
 
@@ -233,8 +233,8 @@ td#bnb-price
  /* CSS styles for the widget container */
  .coin-heatmap-widget-container {
     position: relative;
-    bottom:861px;
-    left: 85%;
+    bottom:461px;
+    left: 1340px;
     width: 0px; /* Adjust the width as needed */}
 
 
@@ -242,10 +242,10 @@ td#bnb-price
  /* CSS styles for the frame */
  .frame {
     position: relative; 
-    bottom: 652px;
+    bottom: 362px;
     width: 250px; /* Adjust the width as needed */
     height: 300px; /* Adjust the height as needed */
-    border: 2px solid #00000000; /* Black border */
+    border: 2px solid #ff050500; /* Black border */
     border-radius: 10px; /* Rounded corners */
     background-color: #282626; /* Light gray background color */
     padding: 20px; /* Add padding inside the frame */
