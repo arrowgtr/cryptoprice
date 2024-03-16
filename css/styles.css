@@ -13,25 +13,23 @@ overflow-x: none;
 
 /* Styles for header and navigation */
 .header {
-    background-image: url('https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/sources/header.png'); /* URL of your header image */
+    background-image: url('header.png'); /* URL of your header image */
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    padding: 40px; /* Adjust padding as needed */
     text-align: center;
 }
 .header-nav {
     position: relative; 
-    left: 45%;
-    bottom: -220px;
-    width: 100%;
+    left: 48%;
+    bottom: -82px;
+    width: 90%;
     transform: translateY(-50%);
     transform: translateX(-50%);
     background-color: #316879; /* Blue metallic color */
     padding: 5px 40px;
     border-radius: 10px;
     text-align: center;
-    font-size: 35px;
+    font-size: 15px;
 }
 
 
