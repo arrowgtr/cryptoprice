@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login Popup</title>
+        <title>ryptoprice</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="loginform.css">
@@ -64,13 +65,11 @@
        
       </div>
     </div>
-
-    <main>
       <div id="crypto-prices">
         <!-- Cryptocurrency prices will be displayed here -->
     </div>
 
-      <div class="frame">
+  
           <table>
               <tr>
                   <th>Coin</th>
@@ -79,38 +78,50 @@
                   <th>Exchanger</th>
               </tr>
               <tr>
-                  <td><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/icons/btc.png" alt="Bitcoin Icon" class="crypto-icon"> BTC</td>
-                  <td id="btc-price">$0.00</td>
-                  <td id="btc-market-cap">$0.00</td>
-                  <td id="btc-exchanger">Mexc</td>
-              </tr>
-              <tr>
-                  <td><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/icons/eth.png" alt="Ethereum Icon" class="crypto-icon"> ETH</td>
-                  <td id="eth-price">$0.00</td>
-                  <td id="eth-market-cap">$0.00</td>
-                  <td id="eth-exchanger">Mexc</td>
-              </tr>
-              <tr>
-                  <td><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/icons/sol.png" alt="Solana Icon" class="crypto-icon"> SOL</td>
-                  <td id="sol-price">$0.00</td>
-                  <td id="sol-market-cap">$0.00</td>
-                  <td id="sol-exchanger">Mexc</td>
-              </tr>
-              <tr>
-                  <td><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/icons/bnb.png" alt="Binance Coin Icon" class="crypto-icon"> BNB</td>
-                  <td id="bnb-price">$0.00</td>
-                  <td id="bnb-market-cap">$0.00</td>
-                  <td id="bnb-exchanger">Mexc</td>
-              </tr>
+                <td><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/icons/btc.png" alt="Bitcoin Icon" class="crypto-icon"> BTC</td>
+                <td id="btc-price" class="price">0.00 </td>
+                <td id="btc-market-cap" class="market-cap">0.00 </td>
+                <td id="btc-exchanger" class="exchanger">
+                  <a href="https://www.mexc.com/register?inviteCode=1hrCQ" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/mexc.png" alt="Mexc Icon" class="exchanger-icon"></a>
+                  <a href="https://www.bybit.com/" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/Bybit.png" alt="Bybit Icon" class="exchanger-icon"></a>
+                  <a href="https://www.binance.com/en/activity/referral-entry/CPA?ref=CPA_005M4Z3290" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/binance.png" alt="Binance Icon" class="exchanger-icon"></a>
+                  <a href="https://bingx.com/invite/EQXLPC" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/Bingx.png" alt="Bingx Icon" class="exchanger-icon"></a></td>
+            </tr>
+            
+            <tr>
+                <td><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/icons/eth.png" alt="Ethereum Icon" class="crypto-icon"> ETH</td>
+                <td id="eth-price" class="price">0.00  </td>
+                <td id="eth-market-cap" class="market-cap">0.00 </td>
+                <td id="eth-exchanger" class="exchanger">                <a href="https://www.mexc.com/register?inviteCode=1hrCQ" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/mexc.png" alt="Mexc Icon" class="exchanger-icon"></a>
+                  <a href="https://www.bybit.com/" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/Bybit.png" alt="Bybit Icon" class="exchanger-icon"></a>
+                  <a href="https://www.binance.com/en/activity/referral-entry/CPA?ref=CPA_005M4Z3290" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/binance.png" alt="Binance Icon" class="exchanger-icon"></a>
+                  <a href="https://bingx.com/invite/EQXLPC" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/Bingx.png" alt="Bingx Icon" class="exchanger-icon"></a></td>
+            </tr>
+            
+            <tr>
+                <td><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/icons/sol.png" alt="Solana Icon" class="crypto-icon"> SOL</td>
+                <td id="sol-price" class="price">0.00</td>
+                <td id="sol-market-cap" class="market-cap">0.00</td>
+                <td id="sol-exchanger" class="exchanger">                <a href="https://www.mexc.com/register?inviteCode=1hrCQ" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/mexc.png" alt="Mexc Icon" class="exchanger-icon"></a>
+                  <a href="https://www.bybit.com/" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/Bybit.png" alt="Bybit Icon" class="exchanger-icon"></a>
+                  <a href="https://www.binance.com/en/activity/referral-entry/CPA?ref=CPA_005M4Z3290" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/binance.png" alt="Binance Icon" class="exchanger-icon"></a>
+                  <a href="https://bingx.com/invite/EQXLPC" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/Bingx.png" alt="Bingx Icon" class="exchanger-icon"></a></td>
+            </tr>
+            
+            <tr>
+                <td><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/icons/bnb.png" alt="Binance Coin Icon" class="crypto-icon"> BNB</td>
+                <td id="bnb-price" class="price">0.00</td>
+                <td id="bnb-market-cap" class="market-cap">0.00</td>
+                <td id="bnb-exchanger" class="exchanger">       <a href="https://www.mexc.com/register?inviteCode=1hrCQ" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/mexc.png" alt="Mexc Icon" class="exchanger-icon"></a>
+                  <a href="https://www.bybit.com/" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/Bybit.png" alt="Bybit Icon" class="exchanger-icon"></a>
+                  <a href="https://www.binance.com/en/activity/referral-entry/CPA?ref=CPA_005M4Z3290" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/binance.png" alt="Binance Icon" class="exchanger-icon"></a>
+                  <a href="https://bingx.com/invite/EQXLPC" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/Bingx.png" alt="Bingx Icon" class="exchanger-icon"></a></td>
+            </tr>
+        
+       
+         
+            
           </table>
-      </div>
-     
-  </main>
-  
-  
-
-
-
   
   
     <div class="cryptohopper-web-widget" data-id="2" data-coins="bitcoin , 
