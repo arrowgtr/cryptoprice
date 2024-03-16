@@ -128,97 +128,68 @@ footer {
 
 
 
-.container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
-}
 
 
-
-
-.frame table td {
-    font-size: 45px; /* Adjust the font size as needed */
-}
-
-.frame table th:nth-child(1) {
-    position: relative;
-    right:  71px; 
-    /* Styles for the first column header */
-    font-size: 38px;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-    border-bottom: 2px solid #cccccc00;
-}
-
-.frame table th:nth-child(2) {
-    /* Styles for the second column header */
-    font-size: 28px;
-    font-weight: bold;
-    text-align: left;
-    padding: 10px;
-    border-bottom: 2px solid #ccc;
-}
-
-.frame table th:nth-child(3) {
-    /* Styles for the third column header */
-    font-size: 28px;
-    font-weight: bold;
-    text-align: left;
-    padding: 10px;
-    border-bottom: 2px solid #ccc;
-}
-
-.frame table th:nth-child(4) {
-    /* Styles for the fourth column header */
-    font-size: 18px;
-    font-weight: bold;
-    text-align: left;
-    padding: 10px;
-    border-bottom: 2px solid #ccc;
-}
-
-
-.frame {
- 
-position: relative;
-top : 40px;
-right: 490px;
-    border: 1px solid #cccccc00;
-    border-radius: 10prgba(204, 204, 204, 0)
-    background-color: #f9f9f900;
-    padding: 20px;
-    margin-top: 20px;
-    margin: 20px auto;
-    max-width: 600px;
-}
 table {
-    width: 200%;
-    border-collapse: collapse;
+    position: relative;
+    background-color: #333333;
+    padding: 21px 0px 80px 120px;
+    top: 112px;
+    left: 253px;
+    width:65%;
 }
 
 th, td {
 font-size: 1.7em;
-    border: 1px solid #dddddd00;
-    padding: 8px;
     text-align: left;
 }
 th {
-    
-    background-color: #33333300;
-    color: #fff;
+    position: relative;
+    left: 2px;
+    background-color: #333333;
+    color: #0fcebb;
 }
 
 .crypto-icon {
+    position: relative;
+    left: 2px;
+    margin-left: 12px;
+top: 12px;
     width: 38px; /* Set width to 1em for all icons */
     height: 38px; /* Set height to 1em for all icons */
 }
 
+td {
+color: #0fcebb;
+}
+
+
+td#btc-price,
+td#eth-price,
+td#sol-price,
+td#bnb-price
+{
+    color: #0fcebb;
+    }
+ td#btc-market-cap,
+ td#eth-market-cap,
+ td#sol-market-cap,
+ td#bnb-market-cap{
+        color: #0fcebb;
+    }
+
+
+    .price-up {
+        color: green;
+        font-weight: bold;
+    }
+    
+    .price-down {
+        color: red;
+        font-weight: bold;
+    }
+.exchanger-icon {
+            width: 48px;
+            height: 40px; /* Adjust the height as needed */
+        }
+        
