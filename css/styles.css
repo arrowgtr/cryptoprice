@@ -4,7 +4,7 @@ html{
     background-size:auto;
 background-repeat: no-repeat;
 overflow-x: none;
- max-width:  1440px;
+width: 100%;
   height: 2800px;
     margin: 0; /* Remove default body margin */
     padding: 0; /* Remove default body padding */
