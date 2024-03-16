@@ -65,6 +65,9 @@
        
       </div>
     </div>
+
+
+    
       <div id="crypto-prices">
         <!-- Cryptocurrency prices will be displayed here -->
     </div>
@@ -78,7 +81,7 @@
                   <th>Exchanger</th>
               </tr>
               <tr>
-                <td><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/icons/btc.png" alt="Bitcoin Icon" class="crypto-icon"> BTC</td>
+                <td class="crypto-info"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/icons/btc.png" alt="Bitcoin Icon" class="crypto-icon"> <span class="crypto-name">BTC</span></td>
                 <td id="btc-price" class="price">0.00 </td>
                 <td id="btc-market-cap" class="market-cap">0.00 </td>
                 <td id="btc-exchanger" class="exchanger">
@@ -89,8 +92,8 @@
             </tr>
             
             <tr>
-                <td><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/icons/eth.png" alt="Ethereum Icon" class="crypto-icon"> ETH</td>
-                <td id="eth-price" class="price">0.00  </td>
+              <td class="crypto-info"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/icons/eth.png" alt="Bitcoin Icon" class="crypto-icon"> <span class="crypto-name">ETH</span></td>
+              <td id="eth-price" class="price">0.00  </td>
                 <td id="eth-market-cap" class="market-cap">0.00 </td>
                 <td id="eth-exchanger" class="exchanger">                <a href="https://www.mexc.com/register?inviteCode=1hrCQ" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/mexc.png" alt="Mexc Icon" class="exchanger-icon"></a>
                   <a href="https://www.bybit.com/" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/Bybit.png" alt="Bybit Icon" class="exchanger-icon"></a>
@@ -99,8 +102,8 @@
             </tr>
             
             <tr>
-                <td><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/icons/sol.png" alt="Solana Icon" class="crypto-icon"> SOL</td>
-                <td id="sol-price" class="price">0.00</td>
+              <td class="crypto-info"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/icons/sol.png" alt="Bitcoin Icon" class="crypto-icon"> <span class="crypto-name">SOL</span></td>
+              <td id="sol-price" class="price">0.00</td>
                 <td id="sol-market-cap" class="market-cap">0.00</td>
                 <td id="sol-exchanger" class="exchanger">                <a href="https://www.mexc.com/register?inviteCode=1hrCQ" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/mexc.png" alt="Mexc Icon" class="exchanger-icon"></a>
                   <a href="https://www.bybit.com/" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/Bybit.png" alt="Bybit Icon" class="exchanger-icon"></a>
@@ -109,25 +112,56 @@
             </tr>
             
             <tr>
-                <td><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/icons/bnb.png" alt="Binance Coin Icon" class="crypto-icon"> BNB</td>
-                <td id="bnb-price" class="price">0.00</td>
+              <td class="crypto-info"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/icons/bnb.png" alt="Bitcoin Icon" class="crypto-icon"> <span class="crypto-name">BNB</span></td>
+              <td id="bnb-price" class="price">0.00</td>
                 <td id="bnb-market-cap" class="market-cap">0.00</td>
                 <td id="bnb-exchanger" class="exchanger">       <a href="https://www.mexc.com/register?inviteCode=1hrCQ" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/mexc.png" alt="Mexc Icon" class="exchanger-icon"></a>
                   <a href="https://www.bybit.com/" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/Bybit.png" alt="Bybit Icon" class="exchanger-icon"></a>
                   <a href="https://www.binance.com/en/activity/referral-entry/CPA?ref=CPA_005M4Z3290" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/binance.png" alt="Binance Icon" class="exchanger-icon"></a>
                   <a href="https://bingx.com/invite/EQXLPC" target="_blank"><img src="https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/exchangers/Bingx.png" alt="Bingx Icon" class="exchanger-icon"></a></td>
             </tr>
-        
-       
-         
             
           </table>
   
-  
-    <div class="cryptohopper-web-widget" data-id="2" data-coins="bitcoin , 
-    eth,bnb,solana,kaspa" data-numcoins="10" data-theme="midnight" data-realtime="on" data-ticker_position="header" data-ticker_speed="10" data-ticker_design="2"></div>
-    <footer>
+        
 
+       <!-- Widget container for the CoinGecko Coin Heatmap Widget -->
+    <div class="coin-heatmap-widget-container">
+      <!-- Include the script to load the widget library -->
+      <script src="https://widgets.coingecko.com/coingecko-coin-heatmap-widget.js"></script>
+      <!-- Add the widget element with height, locale, width, and top attributes -->
+      <coingecko-coin-heatmap-widget height="400" locale="en" width="290" top="20"></coingecko-coin-heatmap-widget>
+  </div>
+
+
+<div class="frame">
+  <!-- Switcher for carousel -->
+  <h1>Panel</h1>
+
+  <div class="switch-container">
+    <label class="label" for="carouselToggle">Carousel</label>
+    <label class="switch toggle1"> <!-- Add unique class for first toggle -->
+      <input type="checkbox" id="carouselToggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <!-- Switcher for heatmap -->
+  <div class="switch-container">
+    <label class="label" for="heatmapToggle">Heatmap</label>
+    <label class="switch toggle2"> <!-- Add unique class for second toggle -->
+      <input type="checkbox" id="heatmapToggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+</div>
+    <div id="widgetContainer" class="cryptohopper-web-widget" data-id="2" data-chart_color="#316879" data-coins="bitcoin,ethereum,bnb,solana,xrp,avalanche-2,chainlink,near-protocol,uniswap,render-token,ordinals" data-theme="midnight" data-realtime="on" data-ticker_design="2"></div>
+  
+  
+
+<footer>
+
+      
         <nav class="footer-nav">
             <ul>
                 <li><a href="#">About</a></li>
@@ -135,11 +169,10 @@
                 <li><a href="#">Forum</a></li>
             </ul>
         </nav>
+       
         <p>&copy; 2024 Crypto Hub. All rights reserved.</p>
     </footer>
-
     <script src="cmcapi.js" defer></script>
-    <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script> <div class="livecoinwatch-widget-3" lcw-base="USD" lcw-d-head="true" lcw-d-name="true" lcw-d-code="true" lcw-d-icon="true" lcw-color-tx="#ffffff" lcw-color-bg="#1f2434" lcw-border-w="1" ></div>
      <script src="script.js"></script>
      <script src="https://www.cryptohopper.com/widgets/js/script"></script>
     

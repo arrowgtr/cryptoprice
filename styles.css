@@ -1,12 +1,11 @@
 
-html {
+html{
     background: linear-gradient(to bottom, hsl(173, 100%, 24%), #001f3f); /* Gradient from dark electric blue to black */
     background-size:auto;
 background-repeat: no-repeat;
-  width: auto;
+overflow-x: none;
+ max-width:  100%;;
   height: 2800px;
-  max-height: max-content;
-  overflow-y: scroll;
     margin: 0; /* Remove default body margin */
     padding: 0; /* Remove default body padding */
     font-family: Arial, sans-serif; /* Optional: Set a default font family */
@@ -18,14 +17,14 @@ background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 50px; /* Adjust padding as needed */
+    padding: 40px; /* Adjust padding as needed */
     text-align: center;
 }
 .header-nav {
     position: relative; 
     left: 45%;
     bottom: -220px;
-    width: 109%;
+    width: 100%;
     transform: translateY(-50%);
     transform: translateX(-50%);
     background-color: #316879; /* Blue metallic color */
@@ -87,26 +86,20 @@ background-repeat: no-repeat;
 }
 
 
-
-
-
-
-
- 
  /* Styles for footer */
 footer {
-    position: relative; /* Set the position to relative */
-
-    top: 1111px; /* Align footer to the bottom of its container */
+    position: absolute; /* Set the position to relative */
+    top: 2550px; /*
     background-color: #00796B; /* Green electric emerald color */
-    color: #000000;
-    padding: 10px;
+    color: #07b17b;
+    width: 95%;
     text-align: center;
     font-size: 2rem;
     margin-top: 20px; /* Add margin-top to create space between footer and content */
 }
 
 .footer-nav {
+    top: 121px; 
     width: 100%;
     display: inline-block;
 }
@@ -122,7 +115,7 @@ footer {
 }
 
 .footer-nav ul li a {
-    color: #fff;
+    color: #15c289;
     text-decoration: none;
 }
 
@@ -131,35 +124,52 @@ footer {
 
 
 table {
+    
     position: relative;
     background-color: #333333;
-    padding: 21px 0px 80px 120px;
+    padding: 21px 0px 40px 20px;
     top: 112px;
     left: 253px;
     width:65%;
+    font-style: bold ;
+    
 }
 
 th, td {
-font-size: 1.7em;
-    text-align: left;
+    font-style: bold ;
+font-size: 2.1em;
+    text-align: center;
 }
 th {
-    position: relative;
-    left: 2px;
-    background-color: #333333;
+
+    left: -5px;
+    background-color: #33333300;
     color: #0fcebb;
+    
 }
 
-.crypto-icon {
+.crypto-name {
     position: relative;
+    bottom: 25px;
+       color: #; /* Set the color of the crypto name */
+    font-size: 1.1em; /* Set the font size of the crypto name */
+    font-weight: bold; /* Optionally, make the crypto name bold */
+    margin-left: 10px; /* Optionally, add left margin to separate icon and name */
+}
+
+
+.crypto-icon {
+   margin-right: 15px; /* Adjust the spacing between icon and text as needed */
+   margin-block: 10px;
+    position: relative;
+    top: 1px;
     left: 2px;
-    margin-left: 12px;
-top: 12px;
-    width: 38px; /* Set width to 1em for all icons */
-    height: 38px; /* Set height to 1em for all icons */
+    width: 64px; /* Set width to 1em for all icons */
+    height: 64px; /* Set height to 1em for all icons */
 }
 
 td {
+   
 color: #0fcebb;
 }
 
@@ -169,12 +179,14 @@ td#eth-price,
 td#sol-price,
 td#bnb-price
 {
+    font-style: bold;
     color: #0fcebb;
     }
  td#btc-market-cap,
  td#eth-market-cap,
  td#sol-market-cap,
  td#bnb-market-cap{
+    font-style: bold;
         color: #0fcebb;
     }
 
@@ -189,7 +201,150 @@ td#bnb-price
         font-weight: bold;
     }
 .exchanger-icon {
-            width: 48px;
-            height: 40px; /* Adjust the height as needed */
+            
+            height: 45px; /* Adjust the height as needed */
+            margin-right: 15px;
         }
         
+
+.cryptohopper-web-widget{
+            position: relative;
+            top: 109px;
+    height: 155px; /* Adjust the height as needed */
+    margin-right: 15px;
+}
+
+
+
+
+
+
+
+  /* Additional styles for the widget container */
+  #widgetContainer {
+    display: none; /* Hide the widget initially */
+    margin-top: 20px;
+  }
+
+ /* CSS styles for the widget container */
+ .coin-heatmap-widget-container {
+    position: absolute;
+    bottom: 42px;
+    left: 81%;
+    width: 0px; /* Adjust the width as needed */}
+
+
+
+ /* CSS styles for the frame */
+ .frame {
+    position: absolute;
+    bottom: 172px;
+    width: 250px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    border: 2px solid #00000000; /* Black border */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #282626; /* Light gray background color */
+    padding: 20px; /* Add padding inside the frame */
+    box-sizing: border-box; /* Include border and padding in the total width/height */
+    box-shadow: 0px 0px 10px rgba(49, 48, 48, 0); /* Add shadow for depth */
+   }
+
+/* CSS styles for the content inside the frame */
+h1 {
+position: relative;
+bottom: 41px;
+right: -42px;
+    font-family: Arial,Bold, sans-serif; /* Optional: Set a font family */
+    font-size: 38px; /* Adjust the font size as needed */
+    color: #ffffff; /* Dark text color */
+}
+
+p {
+    position: relative;
+    bottom: 58px;
+    right: 9px;
+        font-family: Arial,Bold, sans-serif; /* Optional: Set a font family */
+        font-size: 38px; /* Adjust the font size as needed */
+        color: #0fcfbf; /* Dark text color */
+    }
+  
+ /* Switch container styles */
+ .switch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  /* Common switch styles */
+  .switch {
+    display: inline-block;
+    position: relative;
+    bottom: 82px;
+    left: 72px;
+    width: 60px;
+    height: 34px;
+  }
+
+  .switch input[type="checkbox"] {
+    display: none;
+  }
+
+  .slider {
+    position: absolute;
+    bottom: 11px;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #bdc3c7;
+    border-radius: 34px;
+    transition: background-color 0.3s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+
+  input:checked + .slider {
+    background-color: #3498db; /* Change color for checked switch */
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  /* Slider labels */
+  .label {position: relative;
+bottom: 51px;
+right: 52px;
+    color: #0fcebb;
+    font-size: 32px;
+  }
+
+  /* Custom styles for first toggle */
+  .toggle1 .slider:before {
+    background-color: #1abc9c; /* Custom color for unchecked */
+  }
+
+  .toggle1 input:checked + .slider {
+    background-color: #2ecc71; /* Custom color for checked */
+  }
+
+  /* Custom styles for second toggle */
+  .toggle2 .slider:before {
+    background-color: #1abc9c; /* Custom color for unchecked */
+  }
+
+  .toggle2 input:checked + .slider {
+    background-color: #2ecc71; /* Custom color for checked */
+  }
