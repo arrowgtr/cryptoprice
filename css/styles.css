@@ -4,7 +4,13 @@ html{
     background-size:auto;
 background-repeat: no-repeat;
 overflow-x: none;
-width: 1440px;
+  height: 2800px;
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    font-family: Arial, sans-serif; /* Optional: Set a default font family */
+}
+body{
+width:90%;
   height: 2800px;
     margin: 0; /* Remove default body margin */
     padding: 0; /* Remove default body padding */
@@ -126,7 +132,7 @@ table {
     position: relative;
     background-color: #333333;
     padding: 21px 0px 40px 20px;
-    top: 112px;
+    top: 49px;
     left: 253px;
     width:65%;
     font-style: bold ;
@@ -226,17 +232,17 @@ td#bnb-price
 
  /* CSS styles for the widget container */
  .coin-heatmap-widget-container {
-    position: absolute;
-    bottom: 42px;
-    left: 81%;
+    position: relative;
+    bottom:861px;
+    left: 85%;
     width: 0px; /* Adjust the width as needed */}
 
 
 
  /* CSS styles for the frame */
  .frame {
-    position: absolute;
-    bottom: 132px;
+    position: relative; 
+    bottom: 652px;
     width: 250px; /* Adjust the width as needed */
     height: 300px; /* Adjust the height as needed */
     border: 2px solid #00000000; /* Black border */
