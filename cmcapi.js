@@ -52,3 +52,25 @@ setInterval(updatePrices, 1000); // Update every 1 minutes
 
 
 
+document.getElementById('carouselToggle').addEventListener('change', function() {
+    const widgetContainer = document.getElementById('widgetContainer');
+    if (this.checked) {
+      widgetContainer.style.display = 'block';
+    } else {
+      widgetContainer.style.display = 'none';
+    }
+  });
+
+
+
+     // JavaScript to toggle the visibility of the widget container
+     const toggleSwitch = document.getElementById('heatmapToggle');
+     const widgetContainer = document.querySelector('.coin-heatmap-widget-container');
+
+     toggleSwitch.addEventListener('change', function() {
+         if (this.checked) {
+             widgetContainer.style.display = 'block';
+         } else {
+             widgetContainer.style.display = 'none';
+         }
+     });

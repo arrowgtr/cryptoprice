@@ -41,7 +41,7 @@
     right: 257px;
     width: 55px;
     height: 55px;
-    background-image: url('key.png'); /* URL of the key icon image */
+    background-image: url('https://raw.githubusercontent.com/arrowgtr/cryptoprice/main/sources/key.png'); /* URL of the key icon image */
     background-size: cover;
     transition: transform 2.4s ease;
     transform: translateX(0);
