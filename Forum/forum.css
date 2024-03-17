@@ -1,0 +1,110 @@
+
+#ztext {
+    position: relative;
+    background-color: #3d3c3c;
+  top: 220px;
+    left: 93px;
+    width: 89%;
+    height: 64px;
+    border: 3px solid #00000000;
+    padding: 0px;
+}
+/* CSS for the first table header (CMC API KEYS) */
+#ztext th:nth-child(1) {
+position: absolute;
+right: 332px;
+    /* Add your styles for the first table header here */ 
+    background-color: #3d3c3c00;
+     color: #0fcebb; /* Example color */
+    font-size: 36px; /* Example font size */
+    border: 3px solid #00000000;
+    text-align: center;
+width: 415px;
+
+}
+
+/* CSS for the second table header (Username) */
+#ztext th:nth-child(2) {
+    position:absolute;
+    left: 411px;
+    margin-left: 55px;
+    width: 320px;
+    background-color: #3d3c3c00;
+    color: #0fcebb; /* Example color */
+    font-size: 36px; /* Example font size */
+    text-align: center;
+}
+
+/* CSS for the "Add New" button */
+#ztext th:nth-child(3) .addnew {
+    position: absolute;
+    top: 3px;
+    left: 75%;
+    font-size: 39px; /* Example font size */
+    text-align: center;
+    background-color: #3d3c3c00;
+    color: #0fcebb; /* Example color */
+    border: none; /* Example border */
+    cursor: pointer; /* Example cursor */
+   
+}
+
+#ztext th:nth-child(3) .addnew:hover {
+    background-color: #3d3c3c00; /* Example background color on hover */
+}
+
+ 
+table {
+    position: relative;
+    top: 230px;
+    left: 93px;
+    width:88.89%;
+    height: 81px;
+    border: 3px solid #000000;
+margin-right: 22px;
+text-align: center;
+
+    }
+
+
+td {
+    position: relative;
+    bottom: 15px;
+    border: 5px solid #00000000;
+    text-align: center;
+}
+
+#apiKeyTable td:nth-child(1)  {
+    position: relative;
+
+        background-color: #3d3c3c00; /* Example background color on hover */
+    color: #0fcebb;
+}
+
+
+
+/* Style for the buttons */
+button {
+font-size: 22px;
+    cursor: pointer;
+   background-color: #00000000;
+}
+
+
+
+table {
+    text-indent: initial;
+    border-spacing: 2px;
+}
+button i {
+    background-color: rgba(250, 235, 215, 0);
+    margin-right: 5px;
+}
+
+/* Style for the input fields */
+input[type="text"] {
+    width: 200px;
+    padding: px;
+    margin-right: 10px;
+}
+

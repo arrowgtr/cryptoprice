@@ -1,55 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <title>cryptoprice</title>
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <link rel="stylesheet" href="https://arrowgtr.github.io/cryptoprice/css/styles.css">
-          <link rel="stylesheet" href="https://arrowgtr.github.io/cryptoprice/css/loginform.css">
-        <link rel="stylesheet" href="https://arrowgtr.github.io/cryptoprice/css/signupform.css">
-        <link rel="stylesheet" href="https://arrowgtr.github.io/cryptoprice/css/popup.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CSS -->
-
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>cryptoprice</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://arrowgtr.github.io/cryptoprice/css/styles.css">
+    <link rel="stylesheet" href="https://arrowgtr.github.io/cryptoprice/css/loginform.css">
+    <link rel="stylesheet" href="https://arrowgtr.github.io/cryptoprice/css/signupform.css">
+    <link rel="stylesheet" href="https://arrowgtr.github.io/cryptoprice/Forum/Forum.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CSS -->
+</head>
 <body>
-    <header class="header">
-        <nav class="header-nav">
-            <ul>
-              <li><a href="https://arrowgtr.github.io/cryptoprice/index.html">Home</a></li>
-              <li><a href="https://arrowgtr.github.io/cryptoprice/News/News.html">News</a></li>
-              <li><a href="https://arrowgtr.github.io/cryptoprice/Guides/GUIDES.html">Guides</a></li>
-              <li><a href="https://arrowgtr.github.io/cryptoprice/Forum/Forum.html">Forum</a></li>
-            </ul>
-        </nav>
-    </header>
-    <table>
-        <tr>
-            <th>CMC API KEYS</th>
-            <th>Username/th>
-            <th>copy</th>
-          
-        </tr>
-        <tr>
-          <td > </td><span class="crypto-name">b4cf44e1-f1d7-4708-80e9-25643a3f79f3</span></td>
-       
-      </tr>
-      
-      
-    </table>
+<header class="header">
+    <nav class="header-nav">
+        <ul>
+            <li><a href="https://arrowgtr.github.io/cryptoprice/index.html">Home</a></li>
+            <li><a href="https://arrowgtr.github.io/cryptoprice/News/News.html">News</a></li>
+            <li><a href="https://arrowgtr.github.io/cryptoprice/Guides/GUIDES.html">Guides</a></li>
+            <li><a href="https://arrowgtr.github.io/cryptoprice/Forum/Forum.html">Forum</a></li>
+        </ul>
+    </nav>
+</header>
+<table id="ztext">
+    <tr>
+        <th> CMC API KEYS</th>
+        <th> Username</th>
+        <th> <button class="addnew" onclick="addNewRow()">Add New</button></th>
+    </tr>
+</table>
+<table id="apiKeyTable"></table>
+
+
 
 
 <footer>
-    <nav class="footer-nav">
-        <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Guides</a></li>
-            <li><a href="#">Forum</a></li>
-        </ul>
-    </nav>
-    <p>&copy; 2024 Crypto Hub. All rights reserved.</p>
+<nav class="footer-nav">
+    <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Guides</a></li>
+        <li><a href="#">Forum</a></li>
+    </ul>
+</nav>
+<p>&copy; 2024 Crypto Hub. All rights reserved.</p>
 </footer>
+<script>
 
+// Load saved values from localStorage
+window.onload = function() {
+    loadSavedFields();
+};
+
+// Function to load saved fields from localStorage
+function loadSavedFields() {
+    const savedFields = JSON.parse(localStorage.getItem('savedFields')) || [];
+
+    savedFields.forEach(field => {
+        const table = document.getElementById('apiKeyTable');
+        const newRow = table.insertRow(-1);
+
+        const apiKeyCell = newRow.insertCell(0);
+        apiKeyCell.contentEditable = true;
+        apiKeyCell.textContent = field.apiKey;
+
+        const usernameCell = newRow.insertCell(1);
+        usernameCell.contentEditable = true;
+        usernameCell.textContent = field.username;
+
+        const actionsCell = newRow.insertCell(2);
+        actionsCell.innerHTML = `
+            <button onclick="deleteFields(this)">Delete</button>
+            <button onclick="copyApiKey(this)">Copy API Key</button>
+        `;
+    });
+}
+
+// Function to add a new row for a new API key and username
+function addNewRow() {
+    const table = document.getElementById('apiKeyTable');
+    const newRow = table.insertRow(-1);
+
+    const apiKeyCell = newRow.insertCell(0);
+    apiKeyCell.contentEditable = true;
+    apiKeyCell.textContent = 'New API Key';
+
+    const usernameCell = newRow.insertCell(1);
+    usernameCell.contentEditable = true;
+    usernameCell.textContent = 'New Username';
+
+    const actionsCell = newRow.insertCell(2);
+    actionsCell.innerHTML = `
+        <button onclick="deleteFields(this)">Delete</button>
+        <button onclick="copyApiKey(this)">Copy API Key</button>
+    `;
+
+    // Save fields after adding a new row
+    saveFields();
+}
+
+// Function to delete fields
+function deleteFields(button) {
+    const row = button.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+    
+    // Save fields after deleting a row
+    saveFields();
+}
+
+// Function to copy API key to clipboard
+function copyApiKey(button) {
+    const apiKey = button.parentNode.parentNode.cells[0].textContent;
+    navigator.clipboard.writeText(apiKey)
+        .then(() => alert('API Key copied to clipboard!'))
+        .catch(err => console.error('Unable to copy API key', err));
+}
+
+// Function to save fields to localStorage
+function saveFields() {
+    const table = document.getElementById('apiKeyTable');
+    const rows = table.rows;
+    const savedFields = [];
+
+    for (let i = 1; i < rows.length; i++) { // Start from index 1 to skip header row
+        const row = rows[i];
+        const apiKey = row.cells[0].textContent;
+        const username = row.cells[1].textContent;
+        savedFields.push({ apiKey, username });
+    }
+
+    localStorage.setItem('savedFields', JSON.stringify(savedFields));
+   // alert('Fields saved successfully!');
+}
+</script>
 
 </body>
 </html>

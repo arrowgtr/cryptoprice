@@ -162,11 +162,6 @@
         <div id="container" style="position: relative; width: 1000px; height: 100px; overflow: hidden;">
           <iframe src="https://sp3.streams.ovh/cp/widgets/player/single/?p=8034" width="100%" height="130%" frameborder="0"></iframe>
       </div>
-      
-      <audio id="welcomeAudio" autoplay controls oncontextmenu="return false;" style="display: none;">
-        <source src="welcome.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
 
 
      <footer>
@@ -182,12 +177,9 @@
         <p>&copy; 2024 Crypto Hub. All rights reserved.</p>
     </footer>
 
-    <script>
-      document.getElementById("welcomeAudio").volume = 0.5; // Set volume to 50% (between 0 and 1)
-  </script>
   
 
-    <script src="radio.css"></script>
+    <script src="radio.js"></script>
     <script src="cmcapi.js" defer></script>
      <script src="script.js"></script>
      <script src="https://www.cryptohopper.com/widgets/js/script"></script>
