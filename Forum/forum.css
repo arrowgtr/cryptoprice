@@ -1,8 +1,20 @@
 
-#ztext {
+#E{
     position: relative;
     background-color: #3d3c3c;
-  top: 220px;
+  top: 198px;
+    left: 93px;
+    width: 89%;
+    height: 64px;
+    border: 3px solid #00000000;
+    padding: 0px;
+}
+
+
+#apiKeyTable {
+    position: relative;
+    background-color: #3d3c3c;
+  top: 200px;
     left: 93px;
     width: 89%;
     height: 64px;
@@ -10,8 +22,9 @@
     padding: 0px;
 }
 /* CSS for the first table header (CMC API KEYS) */
-#ztext th:nth-child(1) {
-position: absolute;
+#apiKeyTable th:nth-child(1) {
+position: relative;
+bottom: 65px;
 right: 332px;
     /* Add your styles for the first table header here */ 
     background-color: #3d3c3c00;
@@ -24,9 +37,9 @@ width: 415px;
 }
 
 /* CSS for the second table header (Username) */
-#ztext th:nth-child(2) {
-    position:absolute;
-    left: 411px;
+#apiKeyTable th:nth-child(2) {
+    position:relative;
+    bottom: 65px;
     margin-left: 55px;
     width: 320px;
     background-color: #3d3c3c00;
@@ -36,10 +49,10 @@ width: 415px;
 }
 
 /* CSS for the "Add New" button */
-#ztext th:nth-child(3) .addnew {
-    position: absolute;
-    top: 3px;
-    left: 75%;
+#apiKeyTable th:nth-child(3) .addnew {
+    position: relative;
+    bottom: 65px;
+    left: -2%;
     font-size: 39px; /* Example font size */
     text-align: center;
     background-color: #3d3c3c00;
